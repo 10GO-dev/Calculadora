@@ -1,0 +1,146 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/***** calculator *****/
+
+
+.calculator {
+  background-color: #F7CCAC;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  width: 300px;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgb(67, 40, 0);
+}
+
+.display {
+  background-color: #3A3845;
+  width: 85%;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+  margin: 20px 10px 10px;
+  padding-right: 15px;
+  color: #fff;
+  font-family: "console", monospace;
+}
+
+
+.keys {
+  background-color: #C69B7B;
+  border-radius: 20px;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: 20px 10px;
+  padding: 15px 0;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.col {
+  width: 20%;
+  text-align: center;
+}
+
+.col-back {
+  width: 40%;
+  text-align: center;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  background-color: #826F66;
+  width: 40px;
+  height: 40px;
+  border-radius: 15%;
+  border-style: none solid solid none;
+  border-width: 2px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.number-key {
+  border-radius: 50%;
+}
+
+.key:hover {
+  background-color: #3A3845;
+  color: #fff;
+}
+
+#backspace {
+  background-color: red;
+  width: 100%;
+}
+
+/***** End calculator *****/
+
+.history {
+  text-align: center;
+  background-color: #3A3845;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  margin: 0px 20px;
+}
+.history:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  color: black;
+  list-style: none;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}

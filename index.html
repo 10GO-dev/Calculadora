@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/index.js" defer="true" ></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <div id="display" class="display"></div>
+      <div class="keys">
+        <div class="main-buttons">
+          <div class="col">
+            <button class="key" id="clear">AC</button>
+          </div>
+          <div class="col">
+            <button class="key" id="sign">+/-</button>
+          </div>
+          <div class="col-back">
+            <button class="key" id="backspace">&lt;&minus;</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="key number-key" id="seven">7</button>
+          </div>
+          <div class="col">
+            <button class="key number-key" id="eight">8</button>
+          </div>
+          <div class="col">
+            <button class="key number-key" id="nine">9</button>
+          </div>
+          <div class="col">
+            <button class="key operator" id=" divide">&divide;</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="key number-key" id="four">4</button>
+          </div>
+          <div class="col">
+            <button class="key number-key" id="five">5</button>
+          </div>
+          <div class="col">
+            <button class="key number-key" id="six">6</button>
+          </div>
+          <div class="col">
+            <button class="key operator" id="multiply">&times;</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="key number-key" id="one">1</button>
+          </div>
+          <div class="col">
+            <button class="key number-key" id="two">2</button>
+          </div>
+          <div class="col">
+            <button class="key number-key" id="three">3</button>
+          </div>
+          <div class="col">
+            <button class="key operator" id="subtract">-</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="key number-key" id="zero">0</button>
+          </div>
+          <div class="col">
+            <button class="key" id="decimal">.</button>
+          </div>
+          <div class="col">
+            <button class="key" id="equals">=</button>
+          </div>
+          <div class="col">
+            <button class="key operator" id="add">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+        <h2>Historial</h2>
+        <ul id="List">
+          <li>4</li>
+        </ul>
+    </div>
+  </div>
+</body>
+
+</html>
