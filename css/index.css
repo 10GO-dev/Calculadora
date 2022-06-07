@@ -19,6 +19,10 @@
   border-radius: 20px;
   align-items: center;
   box-shadow: 5px 5px 10px rgb(67, 40, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .display {
@@ -104,11 +108,32 @@
   color: white;
   text-align: center;
   margin: 0px 20px;
+  border-radius: 20px;
 }
 .history:after {
   content: "";
   display: table;
   clear: both;
+}
+
+#clearHistory {
+  background-color: #826F66;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 0px 20px;
+}
+
+#clearHistory:hover {
+  background-color: #ff4a43;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 0px 20px;
 }
 
 * {
@@ -117,9 +142,10 @@
 
 /* Remove margins and padding from the list */
 ul {
-  margin: 0;
+  margin: 20px;
   padding: 0;
 }
+
 
 /* Style the list items */
 ul li {
@@ -131,12 +157,12 @@ ul li {
   transition: 0.2s;
   color: black;
   list-style: none;
-
   /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: "console", monospace;
 }
 
 

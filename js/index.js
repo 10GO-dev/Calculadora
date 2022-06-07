@@ -86,17 +86,46 @@ let Calculator = class {
       this.display.innerText = this.displayValue;
       this.operator = operator;
     } else if (this.operator) {
-      this.calculate();
-      this.chooseOperator(operator);
+      if (this.displayValue.slice(-1) === this.operator){
+        this.displayValue = this.displayValue.slice(0, -1) + operator;
+        this.display.innerText = this.displayValue;
+        this.operator = operator;
+      } else { 
+        this.calculate();
+        this.chooseOperator(operator);
+      }
+    } 
+  }
+  newElement(result) {
+
+    var li = document.createElement("li");
+    li.className = "list-item";
+    li.addEventListener("click", () => {
+      let hist = li.innerText;
+      this.displayValue = hist.slice(hist.indexOf("=") + 2);
+      this.display.innerText = this.displayValue;
+    });
+    var t = document.createTextNode(result);
+    li.appendChild(t);
+    if (result === '') {
+      alert("Error");
+    } else {
+      document.querySelector("#List").appendChild(li);
     }
   }
 
+  clearHistory() {
+    document.querySelector("#List").innerHTML = "";
+  }
+  
+
   calculate() {
-    let result = "";
-    console.log(this.firstOperand.length+1);
-    this.secondOperand = this.displayValue.slice(this.firstOperand.length+1);
+    let hist = this.displayValue;
+    let result = "";   
+    this.secondOperand = this.displayValue.slice(this.displayValue.indexOf(this.operator) + 1);
     const firstOperand = parseFloat(this.firstOperand);
     const secondOperand = parseFloat(this.secondOperand);
+    console.log(secondOperand);
     if (this.operator === "+") {
       result = firstOperand + secondOperand;
     } else if (this.operator === "-") {
@@ -111,14 +140,13 @@ let Calculator = class {
     this.firstOperand = "";
     this.secondOperand = "";
     this.operator = "";
-    this.newElement(result);
+    console.log(result);
+    hist = hist + " = " + result;
+    this.newElement(hist);
   }
-
-  
-
 };
 
-
+const calculator = new Calculator();
 
 
 
