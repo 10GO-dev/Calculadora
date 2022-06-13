@@ -14,6 +14,7 @@ let Calculator = class {
     this.secondOperand = "";
     this.operator = "";
     this.lastResult = "";
+    this.opeNum = 0;
     console.log("Calculator initialized");
     this.init();
   }
@@ -111,11 +112,13 @@ let Calculator = class {
       alert("Error");
     } else {
       document.querySelector("#List").appendChild(li);
+      localStorage.setItem("operacion "+this.opeNum, JSON.stringify(result));
     }
   }
 
   clearHistory() {
     document.querySelector("#List").innerHTML = "";
+    localStorage.clear();
   }
   
 
@@ -143,6 +146,7 @@ let Calculator = class {
     console.log(result);
     hist = hist + " = " + result;
     this.newElement(hist);
+    this.opeNum++;
   }
 };
 
